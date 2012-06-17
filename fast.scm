@@ -21,5 +21,5 @@
 	(if (null? lst)
 	  (print (reverse result))
 	  (for-each (lambda(x)
-				  (if (check? (reverse (cons x result)))
-					(loop (delete x lst) (cons x result)))) lst))))
+		(if (check? (reverse (cons x result)))
+		          (loop (delete x lst) (cons x result)))) lst))))
