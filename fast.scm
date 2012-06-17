@@ -1,7 +1,5 @@
 #!/usr/local/bin/gosh
 
-(define count 0)
-
 (define (solve? num ls)
   (let loop ((ls ls)(n 1))
 	(cond
@@ -21,13 +19,7 @@
 (define (queen lst)
   (let loop ((lst lst)(result '()))
 	(if (null? lst)
-		   (print (reverse result))
+	  (print (reverse result))
 	  (for-each (lambda(x)
 				  (if (check? (reverse (cons x result)))
 					(loop (delete x lst) (cons x result)))) lst))))
-  
-
-(define (main args)
-  (display ">> ")(flush)
-  (let ((n (read)))
-	(queen (iota n 0))))
